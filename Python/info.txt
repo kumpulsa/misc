@@ -1,0 +1,2 @@
+Täällä kansiossa on mooc.fi -sivuston järjestämän ohjelmoinnin perusteet 
+-opintojakson tehtäviä. 
