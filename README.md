@@ -5,3 +5,7 @@ Kansiosta löytyy pieniä Javalla tehtyjä tehtäviä. Osa tehtävistä on itse 
 
 ## Python
 Kansiosta löytyy pieniä pythonilla tehtyjä tehtäviä. Tehtävät pääosin mooc.fi -sivuston ohjelmoinnin perusteet -opintojaksolla tehtyjä tehtäviä.
+
+## React 
+Kansiosta löytyy pieniä Reactilla tehtyjä tehtäviä. Tehtävät ovat tehty 
+Codecademyn kurssien mukaan.
