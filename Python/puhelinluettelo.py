@@ -1,3 +1,8 @@
+# puhelinluettelo
+# - pystyy hakemaan henkilöitä ja tulostaa numeron jos henkilo puhelinluettelossa
+# - lisää henkilön puhelinluetteloon
+# - henkilöllä voi olla vain yksi puhelinnumero --> ylikirjoittaa vanhan
+
 puhelinluettelo = {}
 komento = 0
 
