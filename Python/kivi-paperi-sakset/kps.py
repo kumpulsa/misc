@@ -6,6 +6,7 @@ def kps():
     valinnat = {1:"paperi", 2:"sakset", 3:"kivi"}
     pelataanko = "kyllä"
 
+
     while True:
         pelataanko = input("Halautko pelata kivi-paperi-sakset -peliä? (kyllä/ei) ")
         pelataanko = pelataanko.lower()
@@ -15,50 +16,67 @@ def kps():
             return False
         
         elif pelataanko == "kyllä":
-        
-            print("valitse mieleinen: 1 = paperi 2 = sakset 3 = kivi")
-            pelaajan_valinta = int(input("Valinta: "))
-            tietokoneen_valinta = random.randint(1,3)
 
-            print(f"\nsinä valitsit: {valinnat[pelaajan_valinta]}")
-            print(f"tietokone valitsi: {valinnat[tietokoneen_valinta]} \n")
+            tietokoneen_valinta = random.randint(1,3)
+            print("valitse mieleinen: 1 = paperi 2 = sakset 3 = kivi")            
+            pelaajan_valinta = input("Valinta: ")
+            
+            onko_numero = pelaajan_valinta.isnumeric()
             
 
-            # pelaaja valitsi paperin
-            if pelaajan_valinta == 1:
-                # tietokone valitis paperin
-                if tietokoneen_valinta == 2:
-                    tietokone_voitti()
-                # tietokone valitsi kiven
-                elif tietokoneen_valinta == 3:
-                    pelaaja_voitti()
+            if onko_numero:
+                pelaajan_valinta = int(pelaajan_valinta)                
+
+                if pelaajan_valinta < 4:
+                    
+                    print(f"\nsinä valitsit: {valinnat[pelaajan_valinta]}")
+                    print(f"tietokone valitsi: {valinnat[tietokoneen_valinta]} \n")
+                    
+
+                    # pelaaja valitsi paperin
+                    if pelaajan_valinta == 1:
+                        # tietokone valitis paperin
+                        if tietokoneen_valinta == 2:
+                            tietokone_voitti()
+                        # tietokone valitsi kiven
+                        elif tietokoneen_valinta == 3:
+                            pelaaja_voitti()
+                        else:
+                            tasapeli()
+
+
+
+                    # pelaaja valitsi sakset
+                    elif pelaajan_valinta == 2:
+                        # tietokone valitsi paperi
+                        if tietokoneen_valinta == 1:
+                            pelaaja_voitti()
+                        # tietkone valitsi kiven
+                        elif tietokoneen_valinta == 3:
+                            tietokone_voitti()
+                        else:
+                            tasapeli()
+
+
+
+                    # pelaaja valitsi kiven
+                    elif pelaajan_valinta == 3:
+                        # tietokone valitsi paperin
+                        if tietokoneen_valinta == 1:
+                            tietokone_voitti()
+                        # tietokone valitsi sakset
+                        elif tietokoneen_valinta == 2:
+                            pelaaja_voitti()
+                        else:
+                            tasapeli()
+
                 else:
-                    tasapeli()
-
-
-
-            # pelaaja valitsi sakset
-            elif pelaajan_valinta == 2:
-                # tietokone valitsi paperi
-                if tietokoneen_valinta == 1:
-                    pelaaja_voitti()
-                # tietkone valitsi kiven
-                elif tietokoneen_valinta == 3:
-                    tietokone_voitti()
-
-
-
-            # pelaaja valitsi kiven
-            elif pelaajan_valinta == 3:
-                # tietokone valitsi paperin
-                if tietokoneen_valinta == 1:
-                    tietokone_voitti()
-                # tietokone valitsi sakset
-                elif tietokoneen_valinta == 2:
-                    pelaaja_voitti()
+                    print("syötit epäsopivan nuneron \n")
+            else:
+                print("et syöttänyt numero \n")
 
         else:
-            print("syötit väärän komennon")
+            print("syötit väärän komennon \n")
                 
         
             
