@@ -16,3 +16,10 @@ methods and properties that are used:
 - querySelectorAll()
 - removeEventListener()
 - textContent
+
+
+things to add:
+- Changing alert to something else
+- When player click same card twice it shouldn't be accepted as a pair
+- creating button for restart game
+- possibility to change quantity of the cards
