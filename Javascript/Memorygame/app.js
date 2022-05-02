@@ -47,6 +47,14 @@ const cardArray = [
     name: 'rat',
     img: 'images/rat.jpg',
   },
+  {
+    name: 'giraffe',
+    img: 'images/giraffe.jpg',
+  },
+  {
+    name: 'giraffe',
+    img: 'images/giraffe.jpg',
+  },
 ];
 // how to sort array randomly
 cardArray.sort(() => 0.5 - Math.random());
@@ -108,7 +116,7 @@ function checkMatch() {
   } else {
     cards[optionOneId].setAttribute('src', 'images/blank.jpg');
     cards[optionTwoId].setAttribute('src', 'images/blank.jpg');
-    alert('sorry, try again');
+    // alert('sorry, try again');
   }
   resultDisplay.textContent = cardsWon.length;
   cardsChosen = [];
